@@ -1,6 +1,8 @@
+#This Python script downloaded raster data file in .nc format from specified url
+
+
 import requests
 from bs4 import BeautifulSoup as bs
-# import urllib.requests
 
 try:
     resp = requests.get("https://mailtrack.io/trace/link/cb91e92af171a0e317b132507bc57eb22066b02b?url=http%3A%2F%2Ffizz.phys.dal.ca%2F~atmos%2Fmartin%2F%3Fpage_id%3D140&userId=3966469&signature=25076cae96d597e1")
