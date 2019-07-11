@@ -1,3 +1,7 @@
+# This is a python script to download shape data file from specified site in .shp format
+# After running this script an html file (named shape.html) will be downloaded, just open it and hit save.
+# Your shapefile will be downloaded.
+
 import requests
 from bs4 import BeautifulSoup as bs
 
