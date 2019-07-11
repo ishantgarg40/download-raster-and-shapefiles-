@@ -1,9 +1,9 @@
 # This is a python script to download shape data file from specified site in .shp format
-# After running this script a html file (named shape.html) will be downloaded, just open it and hit save.
 # Your shapefile will be downloaded.
 
 import requests
 from bs4 import BeautifulSoup as bs
+import webbrowser
 
 try:
     home_url = "https://sedac.ciesin.columbia.edu"
@@ -17,7 +17,9 @@ try:
     download_url = home_url + str(data)
     resp = requests.get(download_url)
     with open("shape.shp","wb") as f:
-        f.write(resp.content) 
+        f.write(resp.content)
+    
+    webbrowser.open("shape.shp")
     
 except:
     print("Network error or Problem with the URL")
